@@ -359,7 +359,13 @@ Disco-Sci!</h1>
 <h4>MAR 06 2025 - The first commit</h4>
 <p>My first commit is an R script with a dependency to the Bioconductor
 package flowCore. All else is written in base R.</p>
-<p>What does it do?</p>
+<div style="margin-bottom:15px;">
+
+</div>
+<strong>What does it do?</strong>
+<div style="margin-bottom:5px;">
+
+</div>
 <ol style="list-style-type: decimal">
 <li>Performs an automated flow cytometry analysis workflow</li>
 </ol>
@@ -383,25 +389,45 @@ markers, etc.)</li>
 <li>Outputs % values of major T cell groupings</li>
 <li>Outputs 5-number summary</li>
 </ul>
-<p>What does it require?</p>
+<div style="margin-bottom:15px;">
+
+</div>
+<strong>What does it require?</strong>
+<div style="margin-bottom:5px;">
+
+</div>
 <ol style="list-style-type: decimal">
 <li>FCS files generated from peripheral blood samples</li>
 </ol>
-<p><span class="math inline">\(~\)</span></p>
+<ul>
+<li>Experimental information is embedded</li>
+<li>Compensation matrix is embedded</li>
+</ul>
+<div style="margin-bottom:30px;">
+
 </div>
-<div id="background" class="section level4">
-<h4>Background</h4>
-<p>The script leverages specifications by the flow cytometry operator at
+</div>
+<div id="script-details" class="section level4">
+<h4>Script details</h4>
+<p>The script is mostly composed of wrappers that makes call to base R
+function or to flowCore.</p>
+<p>It also leverages specifications by the flow cytometry operator at
 time of acquisition and file generation. The procedure uses the marker
 and channel pairing plus the spillover (AKA compensation) matrix to map
-the workflow.</p>
+the workflow. Without this information the script will fail.</p>
 <p>The workflow performs at a per file basis. It reads in the FCS file
 and then compensates the intensity values before transforming values to
 the “logicle-scale”.</p>
 <p>Next the data is gated using sequential k-means clustering; in order
-of channels the sequence is 1. FSC channel 2. CD3 channel 3. CD4 and CD8
-channel</p>
-<p><span class="math inline">\(~\)</span></p>
+of channels the sequence is</p>
+<ol style="list-style-type: decimal">
+<li>FSC channel</li>
+<li>CD3 channel</li>
+<li>CD4 and CD8 channel</li>
+</ol>
+<div style="margin-bottom:30px;">
+
+</div>
 </div>
 <div id="data-background" class="section level4">
 <h4>Data background</h4>
@@ -409,19 +435,36 @@ channel</p>
 build my procedure has 453 files; 8 of which come from single-stain
 compensation samples (likely beads from the look of the size
 uniformity).</p>
-<p><span class="math inline">\(~\)</span></p>
+<div style="margin-bottom:30px;">
+
+</div>
 </div>
 <div id="performance" class="section level4">
 <h4>Performance</h4>
 <p>Each file takes about 1.2 seconds to process. The reading of the FCS
-file and transformation of data are the biggest computational tasks.
-#### Link</p>
+file and transformation of data are the biggest computational tasks.</p>
+<div style="margin-bottom:30px;">
+
+</div>
+</div>
+<div id="link" class="section level4">
+<h4>Link</h4>
 <p><a href="https://github.com/Disco-Sci/openEnv_FCM_WF" class="uri">https://github.com/Disco-Sci/openEnv_FCM_WF</a></p>
-<p><span class="math inline">\(~\)</span></p>
+<div style="margin-bottom:30px;">
+
+</div>
 </div>
 <div id="thoughts" class="section level4">
 <h4>Thoughts</h4>
-<p>A lot of room for improvement all around, but this is a start</p>
+<p>A lot of room for improvement all around, but this is a start.
+Features that would improve the flow cytometry analysis workflow would
+be to include automated compensation and transformation tasks for the
+user.</p>
+<p>For the programming engineering better qualifications or maybe an
+extension of the classes could be useful in preventing errors.</p>
+<p>If something like this were to go into a production setting and into
+regulated industry then a lot more requirements and documentation would
+be needed.</p>
 </div>
 
 
