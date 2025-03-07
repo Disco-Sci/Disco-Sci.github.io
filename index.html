@@ -2735,12 +2735,7 @@ border-radius: 0px;
 </div>
 <div id="mar-06-2025---the-first-commit" class="section level2">
 <h2>MAR 06 2025 - The first commit</h2>
-<div style="margin-bottom:15px;">
-
-</div>
-<p>My first commit is an R script dependent to the Bioconductor package
-flowCore. All else is written in base R.</p>
-<div style="margin-bottom:15px;">
+<div style="margin-bottom:30px;">
 
 </div>
 <div id="what-does-it-do" class="section level3">
@@ -2765,16 +2760,48 @@ flowCore. All else is written in base R.</p>
 <ul>
 <li>Outputs dataframes of counts into experimental groupings
 <ul>
-<li>With columns for file names, experimental parameters (color +
-markers, etc.)</li>
+<li>Mapped in the dataframe is the hard coded data originating from each
+FCS file</li>
 </ul></li>
 <li>Outputs % values of major T cell groupings</li>
 <li>Outputs 5-number summary</li>
 </ul>
-<div style="margin-bottom:15px;">
+<div style="margin-bottom:30px;">
 
 </div>
-<strong>What does it require?</strong>
+<div id="tabled-or-df-outputs" class="section level5 tabset tabset-fade tabset-pills">
+<h5 class="tabset tabset-fade tabset-pills">Tabled (or DF) Outputs</h5>
+<div id="counts" class="section level6">
+<h6>Counts</h6>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Sample"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Experiment"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Filename"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Device"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Device.Serial"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Target(s)"],"name":[6],"type":["chr"],"align":["left"]},{"label":["Colors"],"name":[7],"type":["chr"],"align":["left"]},{"label":["CD8+CD4+"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["CD8-CD4+"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["CD8+CD4-"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["CD8-CD4-"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"15001.476323","2":"Flu phenodavisPl1","3":"15001_B2_B02.476323.fcs","4":"LSRII","5":"H47100031","6":"CD4 CD3 CD28 CD8","7":"Pacific.Blue.A Am.Cyan.A APC.A APC.Cy7.A","8":"2094","9":"34534","10":"29789","11":"5736","_rn_":"1"},{"1":"15001.476325","2":"Flu phenodavisPl1","3":"15001_C2_C02.476325.fcs","4":"LSRII","5":"H47100031","6":"CD27 CD4 CD3 CD8","7":"PE.A Pacific.Blue.A Am.Cyan.A APC.Cy7.A","8":"2043","9":"33173","10":"28342","11":"5529","_rn_":"2"},{"1":"15001.476327","2":"Flu phenodavisPl1","3":"15001_D2_D02.476327.fcs","4":"LSRII","5":"H47100031","6":"CD27 CD45RA CD4 CD3 CD8","7":"PE.A PE.Cy5.A Pacific.Blue.A Am.Cyan.A APC.Cy7.A","8":"2085","9":"33973","10":"28710","11":"5708","_rn_":"3"},{"1":"15001.476330","2":"Flu phenodavisPl1","3":"15001_E2_E02.476330.fcs","4":"LSRII","5":"H47100031","6":"CD56 CD33 CD3 TCRgd CD19","7":"PE.A PE.Cy7.A Am.Cyan.A APC.A Alexa.700.A","8":"6","9":"210","10":"14","11":"73517","_rn_":"4"},{"1":"15002.476333","2":"Flu phenodavisPl1","3":"15002_A3_A03.476333.fcs","4":"LSRII","5":"H47100031","6":"CD4 CD3 CD8","7":"Pacific.Blue.A Am.Cyan.A APC.Cy7.A","8":"363","9":"41068","10":"30008","11":"5422","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="percentages" class="section level6">
+<h6>Percentages</h6>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Sample"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Experiment"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Filename"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Device"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Device.Serial"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Target(s)"],"name":[6],"type":["chr"],"align":["left"]},{"label":["Colors"],"name":[7],"type":["chr"],"align":["left"]},{"label":["CD8+CD4+"],"name":[8],"type":["chr"],"align":["left"]},{"label":["CD8-CD4+"],"name":[9],"type":["chr"],"align":["left"]},{"label":["CD8+CD4-"],"name":[10],"type":["chr"],"align":["left"]},{"label":["CD8-CD4-"],"name":[11],"type":["chr"],"align":["left"]},{"label":["Total"],"name":[12],"type":["chr"],"align":["left"]}],"data":[{"1":"15001.476323","2":"Flu phenodavisPl1","3":"15001_B2_B02.476323.fcs","4":"LSRII","5":"H47100031","6":"CD4 CD3 CD28 CD8","7":"Pacific.Blue.A Am.Cyan.A APC.A APC.Cy7.A","8":"2.9","9":"47.9","10":"41.3","11":"7.9","12":"100","_rn_":"15001.476323"},{"1":"15001.476325","2":"Flu phenodavisPl1","3":"15001_C2_C02.476325.fcs","4":"LSRII","5":"H47100031","6":"CD27 CD4 CD3 CD8","7":"PE.A Pacific.Blue.A Am.Cyan.A APC.Cy7.A","8":"3","9":"48","10":"41","11":"8","12":"100","_rn_":"15001.476325"},{"1":"15001.476327","2":"Flu phenodavisPl1","3":"15001_D2_D02.476327.fcs","4":"LSRII","5":"H47100031","6":"CD27 CD45RA CD4 CD3 CD8","7":"PE.A PE.Cy5.A Pacific.Blue.A Am.Cyan.A APC.Cy7.A","8":"3","9":"48.2","10":"40.7","11":"8.1","12":"100","_rn_":"15001.476327"},{"1":"15001.476330","2":"Flu phenodavisPl1","3":"15001_E2_E02.476330.fcs","4":"LSRII","5":"H47100031","6":"CD56 CD33 CD3 TCRgd CD19","7":"PE.A PE.Cy7.A Am.Cyan.A APC.A Alexa.700.A","8":"0","9":"0.3","10":"0","11":"99.7","12":"100","_rn_":"15001.476330"},{"1":"15002.476333","2":"Flu phenodavisPl1","3":"15002_A3_A03.476333.fcs","4":"LSRII","5":"H47100031","6":"CD4 CD3 CD8","7":"Pacific.Blue.A Am.Cyan.A APC.Cy7.A","8":"0.5","9":"53.4","10":"39","11":"7.1","12":"100","_rn_":"15002.476333"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="summary" class="section level6">
+<h6>5# Summary</h6>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Min"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Lower Hinge"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Median"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Upper Hinge"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Max"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"0.0","2":"0.50","3":"0.6","4":"1.90","5":"3.0","_rn_":"CD8+CD4+"},{"1":"0.1","2":"47.95","3":"52.7","4":"53.25","5":"72.9","_rn_":"CD8-CD4+"},{"1":"0.0","2":"12.85","3":"39.4","4":"40.30","5":"41.3","_rn_":"CD8+CD4-"},{"1":"6.5","2":"7.05","3":"8.0","4":"14.00","5":"99.8","_rn_":"CD8-CD4-"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div style="margin-bottom:30px;">
+
+</div>
+</div>
+</div>
+</div>
+<div id="what-does-it-require" class="section level3">
+<h3>What does it require?</h3>
 <div style="margin-bottom:5px;">
 
 </div>
@@ -2791,8 +2818,10 @@ markers, etc.)</li>
 </div>
 <div id="script-details" class="section level3">
 <h3>Script details</h3>
-<p>The script is mostly composed of wrappers that makes call to base R
-function or to flowCore.</p>
+<p>My first commit is an R script dependent to the Bioconductor package
+flowCore. All else is written in base R.</p>
+<p>The script is mostly composed of wrapper functions that calls to the
+base R or to flowCore packages.</p>
 <p>It also leverages specifications by the flow cytometry operator at
 time of acquisition and file generation. The procedure uses the marker
 and channel pairing plus the spillover (AKA compensation) matrix to map
@@ -2807,6 +2836,11 @@ of channels the sequence is</p>
 <li>CD3 channel</li>
 <li>CD4 and CD8 channel</li>
 </ol>
+<p>My attached packages:</p>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:flowCore&quot;  &quot;package:stats&quot;    
+##  [4] &quot;package:graphics&quot;  &quot;package:grDevices&quot; &quot;package:utils&quot;    
+##  [7] &quot;package:datasets&quot;  &quot;package:methods&quot;   &quot;Autoloads&quot;        
+## [10] &quot;package:base&quot;</code></pre>
 <div style="margin-bottom:30px;">
 
 </div>
@@ -2837,6 +2871,19 @@ computational tasks.</p>
 
 </div>
 </div>
+<div id="bugs" class="section level3">
+<h3>Bugs</h3>
+<p>There is a bug in the flowCore transform() method as of today. My
+process takes into consideration the specifications needed; however,
+there seems to be a coding issue in the package. I believe the
+Bioconductor forum shows a work-around from the authors; however, I did
+not implement the solution at this time. In the future, I expect to
+apply a more robust method.</p>
+<p>My solution at this time is simple, I throw the method into a
+tryCatch method and return NA values when an error occurs. Of the 453
+files I tried, only 10 or so failed to be rescaled. I think at the next
+update I should be able to correct this behavior.</p>
+</div>
 <div id="thoughts" class="section level3">
 <h3>Thoughts</h3>
 <p>There is a lot of room for improvement all around, but this is a
@@ -2846,6 +2893,7 @@ start.</p>
 <li>method to auto-generate a compensation matrix</li>
 <li>method to auto-generate scaling</li>
 <li>adding graphical outputs</li>
+<li>write files in formatted method for reporting</li>
 </ul>
 <p>Engineering features that would I think would improve performance
 would be:</p>
