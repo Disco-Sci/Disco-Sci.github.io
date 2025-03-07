@@ -2873,16 +2873,14 @@ computational tasks.</p>
 </div>
 <div id="bugs" class="section level3">
 <h3>Bugs</h3>
-<p>There is a bug in the flowCore transform() method as of today. My
-process takes into consideration the specifications needed; however,
-there seems to be a coding issue in the package. I believe the
-Bioconductor forum shows a work-around from the authors; however, I did
-not implement the solution at this time. In the future, I expect to
-apply a more robust method.</p>
-<p>My solution at this time is simple, I throw the method into a
-tryCatch method and return NA values when an error occurs. Of the 453
-files I tried, only 10 or so failed to be rescaled. I think at the next
-update I should be able to correct this behavior.</p>
+<p>There is a bug in the flowCore transform() method as of today. There
+seems to be a coding issue in the package. I believe the Bioconductor
+forum shows a work-around from the authors; however, I did not implement
+the solution at this time.</p>
+<p>My solution simply uses a tryCatch method and return NA values when
+an error occurs. Of the 453 files I tried, only 10 or so failed to be
+rescaled. I think at the next update I should be able to correct this
+behavior.</p>
 </div>
 <div id="thoughts" class="section level3">
 <h3>Thoughts</h3>
